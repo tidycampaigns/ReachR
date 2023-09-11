@@ -38,6 +38,6 @@ import_tag <- function(
 
     assign(name, status_url, envir = .GlobalEnv)
 
-    print("Import started. Use get_import_status() to check on the status of the import.")
+    print(paste0("Import started. Use get_import_status() with input ", name," .")) 
 
 }
