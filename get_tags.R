@@ -1,3 +1,14 @@
+#` @title get_tags
+#`
+#` @description Function to retrieve tags from Reach API
+#`
+#` @return A dataframe of all tags in the Reach campaign you are authenticated for
+#`
+#` @export
+#`
+#` @import dplyr
+#` @import httr
+
 library(dplyr)
 library(httr)
 

@@ -1,4 +1,17 @@
-library(httr)
+#` @title auth_reach
+#`
+#` @description Function to authenticate with the Reach API and create access token for other functions
+#`
+#` @param user Username for Reach API
+#` @param pw Password for Reach API
+#`
+#` @return An access token for use in other functions
+#`
+#` @export
+#`
+#` @import httr
+#` @import dplyr
+#` @import purrr
 
 auth_reach <- function (
 
