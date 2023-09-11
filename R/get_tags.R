@@ -9,9 +9,6 @@
 #` @import dplyr
 #` @import httr
 
-library(dplyr)
-library(httr)
-
 get_tags <- function() {
 
     auth_reach()

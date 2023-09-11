@@ -15,11 +15,6 @@
 #` @import dplyr
 #` @import jsonlite
 
-library(purrr)
-library(httr)
-library(dplyr)
-library(jsonlite)
-
 import_tag <- function(
     tag_id,
     file_url

@@ -10,9 +10,6 @@
 #` @import httr
 #` @import purrr
 
-library(dplyr)
-library(httr)
-
 get_external_id_types <- function() {
 
     auth_reach()
