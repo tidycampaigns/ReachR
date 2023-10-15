@@ -13,7 +13,6 @@
 #` @import purrr
 #` @import httr
 #` @import dplyr
-#` @import jsonlite
 
 import_tag <- function(
     tag_id,
