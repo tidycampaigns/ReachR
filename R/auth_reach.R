@@ -16,7 +16,7 @@
 auth_reach <- function (
 
     user = Sys.getenv("REACH_API_USER"),
-    pw = Sys.getenv("REACH_API_PASSWORD")
+    pw = Sys.getenv("REACH_API_PW")
 
 ) {
 
