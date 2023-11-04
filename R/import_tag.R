@@ -1,18 +1,18 @@
-#` @title import_tag
-#`
-#` @description Function to apply tags from a hosted CSV file into voters in Reach
-#`
-#` @param tag_id ID of the tag you want to apply
-#` @param file_url URL of the hosted CSV file
-#`
-#` @return A message indicating the import has started
-#`
-#` @import glue
-#` @import purrr
-#` @import httr
-#` @import dplyr
-#`
-#` @export
+#' @title import_tag
+#'
+#' @description Function to apply tags from a hosted CSV file into voters in Reach
+#'
+#' @param tag_id ID of the tag you want to apply
+#' @param file_url URL of the hosted CSV file
+#'
+#' @return A message indicating the import has started
+#'
+#' @import glue
+#' @import purrr
+#' @import httr
+#' @import dplyr
+#'
+#' @export
 
 import_tag <- function(
     tag_id,

@@ -1,16 +1,16 @@
-#` @title import_tag_status
-#`
-#` @description Function to retrieve tag import job status from Reach API
-#`
-#` @param status_url URL for tag import job status
-#`
-#` @return A message indicating the import job's status
-#`
-#`
-#` @import httr
-#` @import dplyr
-#`
-#` @export
+#' @title import_tag_status
+#'
+#' @description Function to retrieve tag import job status from Reach API
+#'
+#' @param status_url URL for tag import job status
+#'
+#' @return A message indicating the import job's status
+#'
+#'
+#' @import httr
+#' @import dplyr
+#'
+#' @export
 
 import_tag_status <- function(
     status_url

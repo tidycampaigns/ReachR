@@ -1,13 +1,13 @@
-#` @title get_tags
-#`
-#` @description Function to retrieve tags from Reach API
-#`
-#` @return A dataframe of all tags in the Reach campaign you are authenticated for
-#`
-#` @import dplyr
-#` @import httr
-#`
-#` @export
+#' @title get_tags
+#'
+#' @description Function to retrieve tags from Reach API
+#'
+#' @return A dataframe of all tags in the Reach campaign for which you are authenticated
+#'
+#' @import dplyr
+#' @import httr
+#'
+#' @export
 
 get_tags <- function() {
 

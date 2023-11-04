@@ -1,15 +1,14 @@
-#` @title get_external_id_types
-#`
-#` @description Function to retrieve external ID types for Reach API
-#`
-#` @return A dataframe of external ID types
-#`
-#` @export
-#`
-#` @import dplyr
-#` @import httr
-#` @import purrr
-
+#' @title get_external_id_types
+#'
+#' @description Function to retrieve external ID types for Reach API
+#'
+#' @return A dataframe of external ID types
+#'
+#' @import dplyr
+#' @import httr
+#' @import purrr
+#'
+#' @export
 get_external_id_types <- function() {
 
     auth_reach()
