@@ -4,10 +4,10 @@
 #`
 #` @return A dataframe of all tags in the Reach campaign you are authenticated for
 #`
-#` @export
-#`
 #` @import dplyr
 #` @import httr
+#`
+#` @export
 
 get_tags <- function() {
 

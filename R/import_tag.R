@@ -7,12 +7,12 @@
 #`
 #` @return A message indicating the import has started
 #`
-#` @export
-#`
 #` @import glue
 #` @import purrr
 #` @import httr
 #` @import dplyr
+#`
+#` @export
 
 import_tag <- function(
     tag_id,

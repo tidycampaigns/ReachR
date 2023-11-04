@@ -7,11 +7,11 @@
 #`
 #` @return An access token for use in other functions
 #`
-#` @export
-#`
 #` @import httr
 #` @import dplyr
 #` @import purrr
+#`
+#` @export
 
 auth_reach <- function (
 

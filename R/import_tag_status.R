@@ -6,10 +6,11 @@
 #`
 #` @return A message indicating the import job's status
 #`
-#` @export
 #`
 #` @import httr
 #` @import dplyr
+#`
+#` @export
 
 import_tag_status <- function(
     status_url
