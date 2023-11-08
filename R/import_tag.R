@@ -18,8 +18,15 @@ import_tag <- function(
     tag_id,
     file_url
 ) {
-
+### Comments
+# maybe an optional parameter for a webhook?
+# not sure if this is needed w/ import_tag_status -- but maybe some users like to monitor all their data flows in one place
+​
     auth_reach()
+    ### Comments
+    # is it best practice to authenticate within the function? prevents users from authenticating w/ methods other than Sys.getenv
+    # when managing keys for multiple campaigns, may want to be able to loop through a list of credentials
+    # maybe an optional parameter for access_token, then run auth_reach() if not found?
 
     datareturn <- VERB(
         "POST",
@@ -33,10 +40,18 @@ import_tag <- function(
 
     name <- paste0("status_url_", tag_id)
 
-    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$id}")
+    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
+    ### Comments
+    # changed {datareturn$id} to {datareturn$data$id} 
+    # {datareturn$id} returns empty item
+    
+    # using superassignment operator means that status_url appears in environment in addition to intended item status_url_{tag_id}
+    # is superassignment needed here? extra status_url item may be confusing for user
 
     assign(name, status_url, envir = .GlobalEnv)
 
-    print(paste0("Import started. Use get_import_status() with input ", name," .")) 
+    print(paste0("Import started. Use import_tag_status() with input ", name," .")) 
+    ### Comments
+    # changed get_import_status() to import_tag_status() to match published function
 
 }
