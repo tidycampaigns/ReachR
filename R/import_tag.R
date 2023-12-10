@@ -21,7 +21,7 @@ import_tag <- function(
 ) {
 
     if(is.null(access_token)) {
-        auth_reach()
+       access_token <- auth_reach()
     }
 
     datareturn <- VERB(
