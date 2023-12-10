@@ -33,10 +33,10 @@ import_tag <- function(
 
     name <- paste0("status_url_", tag_id)
 
-    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$id}")
+    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
 
     assign(name, status_url, envir = .GlobalEnv)
 
-    print(paste0("Import started. Use get_import_status() with input ", name," .")) 
+    print(paste0("Import started. Use import_tag_status() with input ", name," .")) 
 
 }
