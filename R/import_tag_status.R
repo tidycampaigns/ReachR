@@ -3,6 +3,7 @@
 #' @description Function to retrieve tag import job status from Reach API
 #'
 #' @param status_url URL for tag import job status
+#' @param access_token Access token to interact with a given Reach campaign via API
 #'
 #' @return A message indicating the import job's status
 #'
@@ -13,10 +14,12 @@
 #' @export
 
 import_tag_status <- function(
-    status_url
+    status_url,
+    access_token
 ) {
-
-    auth_reach()
+    if(is.null(access_token)) {
+        access_token <- auth_reach()
+    }
 
     VERB(
         "GET",

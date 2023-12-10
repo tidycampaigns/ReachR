@@ -27,7 +27,7 @@ auth_reach <- function (
 
     )
 
-    access_token <<- VERB(
+    access_token <- VERB(
 
         "POST",
         url = "https://api.reach.vote/oauth/token",
@@ -37,5 +37,7 @@ auth_reach <- function (
     ) %>%
     content() %>%
     pluck(., 1)
+
+    return(access_token)
     
 }

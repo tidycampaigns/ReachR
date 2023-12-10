@@ -4,6 +4,7 @@
 #'
 #' @param tag_id ID of the tag you want to apply
 #' @param file_url URL of the hosted CSV file
+#' @param access_token Access token to interact with a given Reach campaign via API
 #'
 #' @return A message indicating the import has started
 #'
@@ -16,10 +17,13 @@
 
 import_tag <- function(
     tag_id,
-    file_url
+    file_url,
+    access_token
 ) {
 
-    auth_reach()
+    if(is.null(access_token)) {
+       access_token <- auth_reach()
+    }
 
     datareturn <- VERB(
         "POST",
@@ -33,7 +37,7 @@ import_tag <- function(
 
     name <- paste0("status_url_", tag_id)
 
-    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
+    status_url <- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
 
     assign(name, status_url, envir = .GlobalEnv)
 

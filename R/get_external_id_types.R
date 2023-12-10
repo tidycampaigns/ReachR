@@ -1,6 +1,8 @@
 #' @title get_external_id_types
 #'
 #' @description Function to retrieve external ID types for Reach API
+#' 
+#' @param access_token Access token to interact with a given Reach campaign via API
 #'
 #' @return A dataframe of external ID types
 #'
@@ -9,9 +11,12 @@
 #' @import purrr
 #'
 #' @export
-get_external_id_types <- function() {
-
-    auth_reach()
+get_external_id_types <- function(
+    access_token
+) {
+    if(is.null(access_token)) {
+        access_token <- auth_reach()
+    }
 
     external_id_types <<- VERB(
         "GET",

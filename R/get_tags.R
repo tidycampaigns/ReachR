@@ -1,6 +1,8 @@
 #' @title get_tags
 #'
 #' @description Function to retrieve tags from Reach API
+#' 
+#' @param access_token Access token to interact with a given Reach campaign via API
 #'
 #' @return A dataframe of all tags in the Reach campaign for which you are authenticated
 #'
@@ -9,9 +11,12 @@
 #'
 #' @export
 
-get_tags <- function() {
-
-    auth_reach()
+get_tags <- function(
+    access_token
+) {
+    if(is.null(access_token)) {
+        access_token <- auth_reach()
+    }
 
     tags <<- VERB(
         "GET",
