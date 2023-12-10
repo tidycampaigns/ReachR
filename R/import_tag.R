@@ -4,6 +4,7 @@
 #'
 #' @param tag_id ID of the tag you want to apply
 #' @param file_url URL of the hosted CSV file
+#' @param access_token Access token to interact with a given Reach campaign via API
 #'
 #' @return A message indicating the import has started
 #'
