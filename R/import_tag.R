@@ -16,10 +16,13 @@
 
 import_tag <- function(
     tag_id,
-    file_url
+    file_url,
+    access_token
 ) {
 
-    auth_reach()
+    if(is.null(access_token)) {
+        auth_reach()
+    }
 
     datareturn <- VERB(
         "POST",
@@ -33,7 +36,7 @@ import_tag <- function(
 
     name <- paste0("status_url_", tag_id)
 
-    status_url <<- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
+    status_url <- glue("https://api.reach.vote/api/v1/imports/tags/{datareturn$data$id}")
 
     assign(name, status_url, envir = .GlobalEnv)
 
